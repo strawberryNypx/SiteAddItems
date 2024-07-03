@@ -13,7 +13,7 @@
   <div class="container">
     <div class="content">
       <main class="form-signin w-100 m-auto">
-        <form class="Login" method="post" action="localhost/Functions/php/criarContaFuncao.php">
+        <form class="Login" method="post" action="../Functions/php/criarContaFuncao.php">
           <h1 class="h3 mb-3 fw-normal">Criar Conta</h1>
 
           <div class="form-floating">

@@ -1,5 +1,5 @@
 <?php
-require_once('Conexao.php');
+require_once('Conexao/Conexao.php');
 
 class Funcoes extends Conexao {
 

@@ -1,9 +1,8 @@
-<?php
-
+<?php   
 error_reporting(E_ALL);
 ini_set("display_errors",1);
 
-require('funcoes.php');
+require('../funcoes.php');
 
 
 if(!empty($_POST)) { 
@@ -13,10 +12,9 @@ if(!empty($_POST)) {
         
     $funcoes = new funcoes();
     $funcoes->CriarUsuario($emailCriar,$senhaCriar);
-        
-    echo'<script>window.location.href = "../index.php"</script>';
+    header('../../index.php');
 
 }else{
-    echo'error';
+    echo"error ";
 }
 ?>
