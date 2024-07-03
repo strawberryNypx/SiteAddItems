@@ -35,6 +35,22 @@ class Funcoes extends Conexao {
         $result = parent::insert($dadosDaConta);
     }
 
+    public function ValidarLogin($email, $senha){
+        $dadosDaConta = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
 
+        $result = parent::select($dadosDaConta); 
+
+        $row = $result->fetch_object();
+
+        if($result->num_rows > 0){
+            $_SESSION['email'] = $email;
+            $_SESSION['senha'] = $senha;
+
+            header('Location: ../Paginas/adicionarItem.php');
+
+        }else{
+            header('../index.php');
+        }
+    }
 }
 ?>

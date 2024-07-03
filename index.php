@@ -14,7 +14,7 @@
   <div class="container">
     <div class="content">
       <main class="form-signin w-100 m-auto">
-        <form class="Login" method="post">
+        <form class="Login" method="post" action="Functions/php/logInFuncao.php">
           <h1 class="h3 mb-3 fw-normal">Entrar</h1>
 
           <div class="form-floating">
