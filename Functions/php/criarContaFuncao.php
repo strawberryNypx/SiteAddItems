@@ -12,7 +12,7 @@ if(!empty($_POST)) {
         
     $funcoes = new funcoes();
     $funcoes->CriarUsuario($emailCriar,$senhaCriar);
-    header('../../index.php');
+    header('Location: ../../index.php');
 
 }else{
     echo"error ";
