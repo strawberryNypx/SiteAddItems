@@ -7,15 +7,16 @@
   <div class="container">
     <div class="content">
       <main class="form-signin w-100 m-auto">
-        <form class="AddItem" method="post" action="../Functions/php/adicionarItemFuncao.php">
-          <h1 class="h3 mb-3 fw-normal">Adicionar Item</h1>
+        <form class="EddItem" method="post" action="../Functions/php/editarItemFuncao.php">
+          <h1 class="h3 mb-3 fw-normal">Editar Item</h1>
 
           <div class="form-floating">
-            <input name="item" type="text" class="form-control" id="floatingInput" placeholder="">
-            <label for="floatingInput">digite o item que deseja adicionar...</label>
+            <input name="itemEdd" type="text" class="form-control" id="floatingInput" placeholder="">
+            <label for="floatingInput">Nova palavra...</label>
+            <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
           </div>
           <br>
-          <button class="btn btn-primary w-100 py-2" type="submit">Adicionar</button>
+          <button class="btn btn-primary w-100 py-2" type="submit">Editar</button>
         </form>
       </main>
     </div>

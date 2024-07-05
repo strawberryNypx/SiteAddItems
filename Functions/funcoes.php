@@ -4,14 +4,14 @@ require_once('Conexao/Conexao.php');
 class Funcoes extends Conexao {
 
     public function addItens($item) {
-        if ($result = parent::insert("INSERT INTO ItemsAdicionados (ItemAdd) VALUES ('".$item."')")) {
+        if ($result = parent::insert("INSERT INTO ItemsAdicionados (Item) VALUES ('".$item."')")) {
         }
     }
 
     public function EditarItens($id ,$novapalavra) {
 
         if(isset($novapalavra)){
-            parent::insert("UPDATE  ItemsAdicionados SET ItemAdd = '".$novapalavra."' WHERE id = '".$id."'");
+            parent::insert("UPDATE  ItemsAdicionados SET Item = '".$novapalavra."' WHERE id = '".$id."'");
 
         }else{
             echo "nova palava esta vazia";
@@ -26,7 +26,7 @@ class Funcoes extends Conexao {
 
     public function listarItens(){
 
-        $result = parent::insert("SELECT * FROM ItemsAdicionados");
+        $result = parent::insert("SELECT * FROM `ItemsAdicionados` WHERE 1");
         return $resposta = $result->fetch_all(MYSQLI_ASSOC);
     }              
 
@@ -35,22 +35,5 @@ class Funcoes extends Conexao {
         $result = parent::insert($dadosDaConta);
     }
 
-    public function ValidarLogin($email, $senha){
-        $dadosDaConta = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
-
-        $result = parent::select($dadosDaConta); 
-
-        $row = $result->fetch_object();
-
-        if($result->num_rows > 0){
-            $_SESSION['email'] = $email;
-            $_SESSION['senha'] = $senha;
-
-            header('Location: ../Paginas/adicionarItem.php');
-
-        }else{
-            header('../index.php');
-        }
-    }
 }
 ?>

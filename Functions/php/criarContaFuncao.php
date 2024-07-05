@@ -13,8 +13,10 @@ if(!empty($_POST)) {
     $funcoes = new funcoes();
     $funcoes->CriarUsuario($emailCriar,$senhaCriar);
     header('Location: ../../index.php');
+    exit;
 
 }else{
     echo"error ";
+    exit;
 }
 ?>
