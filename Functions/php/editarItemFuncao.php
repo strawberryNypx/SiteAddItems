@@ -1,5 +1,6 @@
 <?php
 require_once("../funcoes.php");
+session_start();
 if(isset($_POST['itemEdd'])){
     
     $funcoes = new funcoes();

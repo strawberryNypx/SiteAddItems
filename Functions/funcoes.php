@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('Conexao/Conexao.php');
 
 class Funcoes extends Conexao {

@@ -4,7 +4,6 @@
 
     $funcoes = new funcoes();        
     $lista = $funcoes->listarItens();
-
 ?>
 <body>  
 <div class="container" >

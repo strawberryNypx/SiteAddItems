@@ -1,5 +1,8 @@
 <?php
-require('../funcoes.php');;
+session_start();
+
+require('../funcoes.php');
+
 
 $funcao = new funcoes();
 $item = $_POST['item'];
