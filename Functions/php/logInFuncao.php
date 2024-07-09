@@ -25,6 +25,7 @@ if(isset($_POST["email"]) && isset($_POST["senha"])){
     if($qnt > 0){
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
+        $_SESSION['logado'] = True;
             header('Location: /Projetos/SiteAddItems2/Paginas/adicionarItem.php');
             exit;
     }else{

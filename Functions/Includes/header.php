@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (!isset($_SESSION["email"]) && !isset(($_SESSION["senha"]))) {
+    if ($_SESSION["logado"] != True) {
         header("Location: /Projetos/SiteAddItems2/index.php");
     }
 ?><!DOCTYPE html>

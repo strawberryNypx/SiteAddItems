@@ -31,10 +31,6 @@ class Funcoes extends Conexao {
         return $resposta = $result->fetch_all(MYSQLI_ASSOC);
     }              
 
-    public function CriarUsuario($emailCriar, $senhaCriar){
-        $dadosDaConta = "INSERT INTO `Usuario`(`email`, `senha`) VALUES ('$emailCriar','$senhaCriar')";
-        $result = parent::insert($dadosDaConta);
-    }
 
 }
 ?>
