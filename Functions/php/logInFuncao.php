@@ -28,12 +28,12 @@ if(isset($_POST["email"]) && isset($_POST["senha"])){
             header('Location: /Projetos/SiteAddItems2/Paginas/adicionarItem.php');
             exit;
     }else{
-        header('Location: ../../index.php');
+        header('Location: /Projetos/SiteAddItems2/index.php');
         echo"error";
         exit;
 }
 }else{
-    header('Location: index.php');
+    header('Location: /Projetos/SiteAddItems2/index.php');
     exit;
 }
 ?>

@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if (!isset($_SESSION["email"]) && !isset(($_SESSION["senha"]))) {
+        header("Location: /Projetos/SiteAddItems2/index.php");
+    }
 ?><!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,6 +31,9 @@
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="/Projetos/SiteAddItems2/Paginas/listarItems.php">Editar</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/Projetos/SiteAddItems2/Functions/php/sairFuncao.php">Sair</a>
                 </li>
             </ul>
         </div>
